@@ -76,13 +76,11 @@ li {
 
 /* about */
 #about .content {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 #about img {
-  grid-row: 2/3;
-  grid-column: 1/2;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -90,14 +88,6 @@ li {
 }
 #about .text {
   text-align: left;
-}
-#about .content-title {
-    grid-row: 1/2;
-    grid-column: 2/3;
-}
-#about p {
-  grid-row: 2/3;
-  grid-column: 2/3;
 }
 
 /* Bicycle */

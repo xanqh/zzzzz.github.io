@@ -3,41 +3,141 @@
 html {
     font-size: 100%;
 }
-body{
-    color: #383e45;
-    font-size: 0.9rem;
+body {
+  color: #383e45;
+  font-size: 0.9rem;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 li {
-    list-style: none;
+  list-style: none;
 }
 .site-title {
-    width: 120px;
-    line-height: 1px;
-    padding: 10px 0;
+  width: 120px;
+  line-height: 1px;
+  padding: 10px 0;
 }
 .site-title a {
-    display: block;
+  display: block;
 }
-.selection-title {
-    display: inline-block;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 60px;
-    border-bottom: solid 1px #383e45;
+.section-title {
+  display: inline-block;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 60px;
+  border-bottom: solid 1px #383e45;
 }
 .content-title {
-    font-size: 1rem;
-    margin: 10px 0;
+  font-size: 1rem;
+  margin: 10px 0;
 }
 .wrapper {
-    max-width: 960px;
-    margin: 0 auto 100px auto;
-    padding: 0 4%;
+  max-width: 960px;
+  margin: 0 auto 100px auto;
+  padding: 0 4%;
+  text-align: center;
+}
+
+/* ヘッダー */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+#header ul {
+  display: flex;
+  padding: 10px 0;
+}
+#header li {
+  margin-left: 30px;
+}
+#header li a {
+  color: #24292e;
+}
+#header li a:hover {
+  opacity: 0.7;
+}
+
+/* mainvisual */
+#mainvisual {
+    margin-bottom: 80px;
+  }
+#mainvisual img {
+  width: 100%;
+  max-width: 1920px;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* about */
+#about .content {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+#about img {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+#about .text {
+  text-align: left;
+}
+#about .content-title {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+#about p {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+/* Bicycle */
+#bicycle ul {
+    display: flex;
+    justify-content: space-between;
+}
+#bicycle li {
+  width: 32%;
+}
+
+/* footer */
+#footer {
+    font-size: 0.5rem;
+    padding: 10px 0;
     text-align: center;
+}
+
+/* SP */
+@media screen and (max-width: 600px) {
+
+    /* mainvisual */
+    #mainvisual img {
+        height: calc(100vh - 60px);
+    }
+
+    /* about */
+    #about .content {
+        flex-direction: column;
+    }
+    #about img {
+        margin-right: 0;
+    }
+
+    /* bicycle */
+    #bicycle ul {
+        flex-direction: column;
+    }
+    #bicycle li {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
